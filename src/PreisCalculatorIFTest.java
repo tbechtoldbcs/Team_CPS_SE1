@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PreisCalculatorIFTest {
-    private PreisCalculator simple, complex, custom;
+    private PreisCalculatorIF simple, complex, custom;
 
     @Before
     public void setUp(){
