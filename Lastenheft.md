@@ -1,5 +1,3 @@
-Lastenheft
-
 MUSS-Kriterien
 
 Das System muss fähig seine Schranken für eingehende und ausgehende Fahrzeuge zu öffnen und zu schließen.
