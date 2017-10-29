@@ -7,4 +7,4 @@
 7. Als Kunde möchte ich einen Parkplatz mieten können, um jederzeit einen Parkplatz zu haben und um Kosten zu sparen.
 8. Als Kunde möchte ich wissen, ob im Parkhaus noch Plätze frei sind, um auch parken zu können.
 9. Als Kunde mit Mietparkplatz möchte ich auch außerhalb der Öffnungszeiten parken können.
-10- Als Kunde möchte ich für längere Parkdauer einen Rabatt bekommen, um weniger zahlen zu müssen.
+10. Als Kunde möchte ich für längere Parkdauer einen Rabatt bekommen, um weniger zahlen zu müssen.
