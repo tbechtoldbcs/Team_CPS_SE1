@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Kunde
+actor Besitzer
+actor HausBank
+actor Kreditkarten_Unternehmen
+rectangle Parkhaus {
+  Kunde -- (parkhaus einfahrt)
+  Kunde -- (ticket ziehen)
+  Kunde -- (parkplatz waehlen)
+  Kunde -- (parkhaus verlassen)
+  Besitzer -- (parkhaus informationen)
+  Besitzer -- (parkhaus einstellung)
+
+  (lastschrift) -- HausBank
+  (kreditkarte) -- Kreditkarten_Unternehmen
+
+  (parkhaus einfahrt) .> (ticket ziehen) : <<include>>
+  (parkhaus einfahrt) <.. (parkhaus verlassen) : <<extend>>
+  (parkhaus einfahrt) <.. (parkplatz waehlen) : <<extend>>
+  (parkhaus verlassen) .> (ticket bezahlen) : <<include>>
+  
+  (ticket bezahlen) <|-- (lastschrift)
+  (ticket bezahlen) <|-- (bar)
+  (ticket bezahlen) <|-- (kreditkarte)
+
+  (parkhaus informationen) <.. (parkhaus zustand) : <<extends>>
+  (parkhaus informationen) <.. (parkhaus ueberwachung) : <<extends>>
+  (parkhaus informationen) <.. (parkhaus rentabilitaet) : <<extends>>
+
+  (parkhaus zustand) <.. (anzahl freier parkplaetze) : <<extends>>
+  (parkhaus zustand) <.. (stoerungen) : <<extends>>
+
+  (parkhaus einstellung) <.. (preis regulieren) : <<extends>>
+  (parkhaus einstellung) <.. (oeffnungszeiten regulieren) : <<extends>>
+}
+@enduml
